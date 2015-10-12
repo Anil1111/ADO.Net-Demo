@@ -1,0 +1,20 @@
+Interoperability
+----------------
+Allows data to be put into xml format, which is universally integrateable.
+
+Maintainability
+---------------
+Using ADO.NET datasets, the division of server tiers is made easier by using xml format to have the tiers communicate with each other.
+
+Programmability
+---------------
+Typed datasets shorten the amount of code required to access data.
+
+Data Navigation
+---------------
+In ADO.NET, rows are represented as collections, and you can interact with them like any other collection type.
+
+connection command datareader
+
+Cursor - a DB element that controls record navigation, updating data, and tracking user-changes.
+The DataReader does what a forward-only, read-only cursor does.
