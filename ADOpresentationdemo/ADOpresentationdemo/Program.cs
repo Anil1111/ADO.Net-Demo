@@ -12,9 +12,9 @@ namespace ADOpresentationdemo
     {
         public static void Main(string[] args)
         {
-            //AW_ProductModelRepo prodModR = new AW_ProductModelRepo();
-            //prodModR.CreateGetClothingProcedureIfNull();
-            //PrintProductsByGender("Men%");
+            AW_ProductModelRepo prodModR = new AW_ProductModelRepo();
+            prodModR.CreateGetClothingProcedureIfNull();
+            PrintProductsByGender("Men%");
             PrintProducts();
             Console.ReadLine();
         }
