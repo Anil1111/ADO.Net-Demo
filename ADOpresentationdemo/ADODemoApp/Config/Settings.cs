@@ -9,6 +9,7 @@ namespace ADODemoApp.Config
 {
     public class Settings
     {
-        public static string ConnectionString = ConfigurationManager.ConnectionStrings["Northwind"].ConnectionString;
+        //public static string NorthwindConStr = ConfigurationManager.ConnectionStrings["Northwind"].ConnectionString;
+        public static string AdventureWorksConStr = ConfigurationManager.ConnectionStrings["AdventureWorks"].ConnectionString;
     }
 }
