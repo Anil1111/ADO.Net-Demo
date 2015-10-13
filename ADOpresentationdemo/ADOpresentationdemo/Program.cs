@@ -12,11 +12,14 @@ namespace ADOpresentationdemo
     {
         public static void Main(string[] args)
         {
-            PrintOrders();
+            //AW_ProductModelRepo prodModR = new AW_ProductModelRepo();
+            //prodModR.CreateGetClothingProcedureIfNull();
+            //PrintProductsByGender("Men%");
+            PrintProducts();
             Console.ReadLine();
         }
 
-        private static void PrintOrders()
+        private static void PrintProducts()
         {
             AW_ProductRepo aw_pR = new AW_ProductRepo();
             List<AW_Product> products = aw_pR.GetAll();
@@ -30,6 +33,19 @@ namespace ADOpresentationdemo
                 Console.WriteLine(prod.Size);
                 Console.WriteLine(prod.SizeUnitMeasureCode);
                 Console.WriteLine(prod.WeightUnitMeasureCode);
+            }
+        }
+
+        private static void PrintProductsByGender(string gender)
+        {
+            AW_ProductModelRepo aw_pmR = new AW_ProductModelRepo();
+            List<AW_ProductModel> products = aw_pmR.GetProductsByGender(gender);
+
+            foreach (var prod in products)
+            {
+                Console.WriteLine("---------------------");
+                Console.WriteLine(prod.ProductModelID);
+                Console.WriteLine(prod.Name);
             }
         }
     }

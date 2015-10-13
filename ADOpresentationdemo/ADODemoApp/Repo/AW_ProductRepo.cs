@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,17 +15,18 @@ namespace ADODemoApp.Repo
     {
         public List<AW_Product> GetAll()
         {
-            List<AW_Product> orders = new List<AW_Product>();
+            List<AW_Product> products = new List<AW_Product>();
 
             using (SqlConnection con = new SqlConnection(Settings.AdventureWorksConStr))
             {
                 // Create a command
-                SqlCommand command = new SqlCommand
-                {
-                    CommandText = "SELECT ProductID, Name, Color, ListPrice, Size, SizeUnitMeasureCode, " +
-                                  "WeightUnitMeasureCode FROM Production.Product",
-                    Connection = con
-                };
+
+                SqlCommand command = new SqlCommand();
+                command.CommandText = "SELECT Top(5) ProductID,Name,Color,ListPrice," +
+                                      "Size,SizeUnitMeasureCode,WeightUnitMeasureCode " +
+                                      "FROM Production.Product " +
+                                      "ORDER BY ListPrice DESC";
+                command.Connection = con;
 
                 con.Open(); // must have open connection to query
 
@@ -32,11 +34,11 @@ namespace ADODemoApp.Repo
                 {
                     while (dr.Read())
                     {
-                        orders.Add(StoreOrderData(dr));
+                        products.Add(StoreOrderData(dr));
                     }
                 }
             }
-            return orders;
+            return products;
         }
 
         private AW_Product StoreOrderData(SqlDataReader dr)

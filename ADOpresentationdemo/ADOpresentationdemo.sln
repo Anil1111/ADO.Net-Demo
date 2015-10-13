@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOpresentationdemo", "ADOp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADODemoApp", "ADODemoApp\ADODemoApp.csproj", "{9864F35B-0B91-457E-B594-D030B4EC6F12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADODemoApp.Web", "ADODemoApp.Web\ADODemoApp.Web.csproj", "{0005F8C0-6D2B-4D55-8015-6CC07B5803F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9864F35B-0B91-457E-B594-D030B4EC6F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9864F35B-0B91-457E-B594-D030B4EC6F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9864F35B-0B91-457E-B594-D030B4EC6F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0005F8C0-6D2B-4D55-8015-6CC07B5803F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0005F8C0-6D2B-4D55-8015-6CC07B5803F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0005F8C0-6D2B-4D55-8015-6CC07B5803F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0005F8C0-6D2B-4D55-8015-6CC07B5803F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
