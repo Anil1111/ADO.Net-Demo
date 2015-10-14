@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "GetProductsByGender";
+}
+
+<h2>Get Products By Gender</h2>
+
+<hr />
+
+@Html.ActionLink("Male", "ListProductsByGender", new { choice = "Men%" })
+
+<bdi> | </bdi>
+
+@Html.ActionLink("Female", "ListProductsByGender", new { choice = "Wom%" })
+
+

@@ -1,0 +1,36 @@
+﻿@model System.Collections.Generic.List<ADODemoApp.Model.AW_ProductModel>
+
+@{
+    ViewBag.Title = "ListProductsByGender";
+}
+
+<h2>ListProductsByGender</h2>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Product Model ID
+            </th>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductModelID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

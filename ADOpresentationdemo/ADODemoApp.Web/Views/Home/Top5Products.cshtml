@@ -1,0 +1,67 @@
+﻿@model System.Collections.Generic.List<ADODemoApp.Model.AW_Product>
+
+@{
+    ViewBag.Title = "Top5Products";
+}
+
+<h2>Top5Products</h2>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Product ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Color
+            </th>
+            <th>
+                List Price
+            </th>
+            <th>
+                Size
+            </th>
+            <th>
+                Size Measurement Unit
+            </th>
+            <th>
+                Weight Measurement Unit
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ListPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SizeUnitMeasureCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WeightUnitMeasureCode)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
