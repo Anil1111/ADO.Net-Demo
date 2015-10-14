@@ -25,7 +25,7 @@ namespace ADODemoApp.Repo
                 command.CommandText = "SELECT Top(5) ProductID,Name,Color,ListPrice," +
                                       "Size,SizeUnitMeasureCode,WeightUnitMeasureCode " +
                                       "FROM Production.Product " +
-                                      "ORDER BY ListPrice DESC";
+                                      "ORDER BY ProductModelID DESC";
                 command.Connection = con;
 
                 con.Open(); // must have open connection to query
