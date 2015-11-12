@@ -1,0 +1,5 @@
+To launch the MVC application in Microsoft Visual Studio, open the ADOpresentationdemo.sln solution file.
+
+Once open in Visual Studio:
+To run demo:
+If it won't launch when you click Start, then go to the solution at the top of solution explorer, right-click, go to properties.  Change the single startup project to ADODemoApp.Web, click Apply and click OK. Then click Start.
